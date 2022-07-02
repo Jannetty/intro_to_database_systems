@@ -1,0 +1,36 @@
+For both of the following questions, consider a database with objects
+X, Y, and Z and assume that there are two transactions T1 and T2 that 
+attempt the following operations:
+
+T1: R(X), R(Y), W(X) 
+
+T2: R(X), R(Y), W(Y), R(X), R(Y), W(X), R(Z), W(Z)
+
+----------------------------------------------------------------------
+A) Write an example schedule that interleaves operations between 
+T1 and T2, that is NOT conflict serializable.
+
+Answer:
+R1(X), R2(X), R2(Y), W2(Y), R1(Y), W1(X), R2(X), R2(Y), W2(X), R2(Z), W2(Z)
+
+----------------------------------------------------------------------
+B) If T1 is instead just “R(X)”, this corresponds to T1 just being a 
+single query like 
+
+SELECT * FROM Flights WHERE id=1024;
+
+Do we need a transaction for a single query statement like this? 
+Why or why not?
+
+Answer: Yes we need a transaction for a single query statement like
+this because we need to read each tuple to see whether the id=1024
+statement is true, and the id value of each tuple (and number of tuples
+for which id=1024) will depend on when each read operation is performed.
+If we want to have a serializable schedule in which the value of each 
+element this T1 retrieves is as though it came from the same time point,
+we would want all write operations (that write new values to id) of
+interwoven transactions to happen before or after all read statements
+of T1 and we would not want to return any tuples that are inserted or
+deleted in the time between when the tuples begin being read and when
+they finish being read. To ensure this schedule, we need a transaction
+for this query statement.

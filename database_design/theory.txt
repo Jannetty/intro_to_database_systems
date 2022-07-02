@@ -41,7 +41,8 @@ functional dependencies. For each closed attribute set below, give a
 set of functional dependencies that is consistent with it.
 
 a. All subsets of {A,B,C,D} are closed.
-Answer: There are no functional dependencies between any of the attributes.
+Answer: Apart from trivial functional dependencies (ex {A, B} → B), 
+there are no functional dependencies between any of the attributes.
 
 b. The only closed subsets of {A,B,C,D} are {} and {A,B,C,D}.
 Answer: A → B, B → C, C → D, D → A
