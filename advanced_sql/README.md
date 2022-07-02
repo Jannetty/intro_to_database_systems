@@ -1,6 +1,6 @@
 # Advanced SQL Queries
 These queries were run on an SQL Server on [Windows Azure](https://azure.microsoft.com/en-us/). Data were 1148675 flights from the
- [Bureau of Transportation Statistics](http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time) dataset. The subset of flights used is unfortunately no longer publically available. *Data files are not included in this repository and therefore these queries will not run*. Queries were written using the [SQL Server extension for Visual Studio Code](https://docs.microsoft.com/en-us/sql/tools/visual-studio-code/sql-server-develop-use-vscode?view=sql-server-ver15)
+ [Bureau of Transportation Statistics](http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time) dataset. The subset of flights used is unfortunately no longer publically available. *Data files are not included in this repository and therefore these queries will not run*. The first 20 rows of output from queries is commented in each file. Queries were written using the [SQL Server extension for Visual Studio Code](https://docs.microsoft.com/en-us/sql/tools/visual-studio-code/sql-server-develop-use-vscode?view=sql-server-ver15)
 
  ## Overview of files
  | File Name | Description |

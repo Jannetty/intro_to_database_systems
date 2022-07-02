@@ -1,0 +1,50 @@
+1.  Decompose the following schema into BCNF:
+R(A,B,C,D,E) with functional dependencies D → B, CE → A.
+
+Step 1:
+First I correct the D → B dependency violation by moving B from R1 to 
+R2 and putting D in R2 so that R1 and R2 can be rejoined.
+
+R1(A, B, C, D, E) → R1(A, C, D, E), R2(D, B)
+
+Step 2:
+Next I correct the CE → A dependency violation by moving A from R1 to 
+R3 and putting C and E in R3 so R3 can be rejoined to R1.
+
+R1(A, C, D, E), R2(D, B) → R1(C, E, D), R2(D, B), R3(C, E, A)
+
+Final BCNF schema: R1(C, E, D), R2(D, B), R3(C, E, A)
+
+-------------------------------------------------------------------
+2. Decompose the following schema into BCNF:
+S(A,B,C,D,E) with functional dependencies A → E, BC → A, DE → B.
+
+Step 1:
+First I correct the A → E dependency violation by moving E from S1 to 
+S2 and putting A in S2 so that S1 and S2 can be rejoined.
+
+S1(A, B, C, D, E) → S1(A, B, C, D), S2(A, E)
+
+Step 2:
+Next I correct the BC → A dependency violation by moving A from S1 to
+S3 and putting B, and C in S3 so that S3 can be joined with S1.
+
+S1(A, B, C, D), S2(A, E) → S1(B, C, D), S2(A, E), S3(B, C, A)
+
+Final BCNF schema: S1(B, C, D), S2(A, E), S3(B, C, A)
+
+-------------------------------------------------------------------
+3. A set of attributes X is called closed (with respect to a given set of
+functional dependencies) if X⁺ = X. 
+Consider a relation with schema R(A,B,C,D) and an unknown set of 
+functional dependencies. For each closed attribute set below, give a 
+set of functional dependencies that is consistent with it.
+
+a. All subsets of {A,B,C,D} are closed.
+Answer: There are no functional dependencies between any of the attributes.
+
+b. The only closed subsets of {A,B,C,D} are {} and {A,B,C,D}.
+Answer: A → B, B → C, C → D, D → A
+
+e. The only closed subsets of {A,B,C,D} are {}, {B,C}, and {A,B,C,D}.
+Answer: B → C, C → B, A → D, A → B, D → A

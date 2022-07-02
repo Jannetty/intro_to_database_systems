@@ -30,6 +30,7 @@ sqlite> .read qX.sql
 |*[flights-small.csv](flights-small.csv)* | subset of [Bureau of Transportation flight statistics](http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time). See schema in FLIGHTS table in [create-tables.sql](create-tables.sql). |
 
 ## Overview of SQL files
+Output cardinality of each query is commented at end of each query sql file.
 | File Name | Description |
 | :-------: | :---------- |
 | *[create-tables.sql](create-tables.sql)* | creates tables to store data from data files. See this file to see data file (and table) schemas. |
