@@ -3,6 +3,8 @@
 Practice writing SQL queries on a relational flights database. Data abridged from [Bureau of Transportation Statistics](http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time).
 
 ## Running Queries
+Data files must be uncompressed from [flight_dataset.zip](flight_dataset.zip). All files in uncompressed flight-dataset directory must be moved into the same directory as .sql files to run queries.
+
 You must have [SQLite 3](https://www.sqlite.org/) installed to run queries.
 To run, launch sqlite3:
 ```bash
@@ -21,11 +23,11 @@ sqlite> .read qX.sql
 ## Overview of data files
 | File Name | Description |
 | :-------: | :---------- |
+|*[flight_dataset.zip](flight_dataset.zip)* | compressed version of all data files. Please uncompress and put files (described below) in same directory as sql files to run queries. |
 |*[carriers.csv](carriers.csv)* | carriers and their abbreviations (IDs) |
 |*[months.csv](months.csv)* | months and their int abbreviations (IDs)|
 |*[weekdays.csv](weekdays.csv)* | weekdays and their int abbreviations (IDs)|
 |*[flights-small.csv](flights-small.csv)* | subset of [Bureau of Transportation flight statistics](http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time). See schema in FLIGHTS table in [create-tables.sql](create-tables.sql). |
-|*[flight_dataset.zip](flight_dataset.zip)* | compressed version of all above data files |
 
 ## Overview of SQL files
 | File Name | Description |
