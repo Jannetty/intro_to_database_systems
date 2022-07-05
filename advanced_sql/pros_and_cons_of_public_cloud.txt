@@ -1,5 +1,19 @@
-There are several advantages to using a DBMS service in a public cloud in comparison to running a database locally. Using a public cloud based DBMS means that the database is accessible from any computer connected to the internet. Data in the database are physically secure in that they will not be lost if your local machine is destroyed or stolen. Cloud based DBMS services may require more advanced identity verification steps than users may implement on their local machines before allowing a user to interact with a database, which may bolster security.
+There are several advantages to using a DBMS service in a public cloud in comparison
+to running a database locally. Using a public cloud based DBMS means that the database
+is accessible from any computer connected to the internet. Data in the database are
+physically secure in that they will not be lost if your local machine is destroyed or
+stolen. Cloud based DBMS services may require more advanced identity verification steps
+than users may implement on their local machines before allowing a user to interact with
+a database, which may bolster security.
 
-There are also disadvantages to using a DBMS service in a public cloud in comparison to running a database locally. Accessing databases in a cloud service requires a stable and secure internet connection whereas databases stored locally can be accessed any time. Additionally, hackers may be able to access databases stored in cloud services despite security efforts.
+There are also disadvantages to using a DBMS service in a public cloud in comparison to
+running a database locally. Accessing databases in a cloud service requires a stable and
+secure internet connection whereas databases stored locally can be accessed any time.
+Additionally, hackers may be able to access databases stored in cloud services despite
+security efforts.
 
-Overall, I think using a DBMS as a service in a public cloud is a great choice for use cases where users in many different locations need to access a database and data needs protection from hardware malfunction. Using a public cloud may not be a good choice if only one user needs to access the database, users do not have ready access to secure, stable internet connections, or privacy is of the utmost importance.
+Overall, I think using a DBMS as a service in a public cloud is a great choice for use cases
+where users in many different locations need to access a database and data needs protection
+from hardware malfunction. Using a public cloud may not be a good choice if only one user
+needs to access the database, users do not have ready access to secure, stable internet
+connections, or privacy is of the utmost importance.
