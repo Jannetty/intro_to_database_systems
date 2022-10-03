@@ -21,6 +21,7 @@ sqlite> .read qX.sql
 ```
 
 ## Overview of data files
+Download and unzip flight_dataset.zip to see these files
 | File Name | Description |
 | :-------: | :---------- |
 |*[flight_dataset.zip](flight_dataset.zip)* | compressed version of all data files. Please uncompress and put files (described below) in same directory as sql files to run queries. |
